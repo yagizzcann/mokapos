@@ -1,6 +1,6 @@
 namespace MokaPos.Request
 {
-    public class CaptureRequest : BaseRequest
+    public class CaptureRequest : BasePaymentDealerRequest
     {
         public Capture PaymentDealerRequest { get; set; }
     }

@@ -1,6 +1,6 @@
 namespace MokaPos.Request
 {
-    public class UpdateCustomerRequest : BaseRequest
+    public class UpdateCustomerRequest : BaseDealerCustomerRequest
     {
         public UpdateCustomer DealerCustomerRequest { get; set; }
     }

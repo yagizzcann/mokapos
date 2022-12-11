@@ -5,7 +5,7 @@ namespace MokaPos
 {
     public class BaseRequest
     {
-        public PaymentDealerAuthentication PaymentDealerAuthentication { get; set; }
+       
         public string BaseUrl { get; set; }
 
 

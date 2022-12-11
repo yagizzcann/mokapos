@@ -2,7 +2,7 @@ namespace MokaPos.Request
 {
     public class UpdateCustomer
     {
-        public string DealerCustomerId { get; set; }
+        public int DealerCustomerId { get; set; }
         public string CustomerCode { get; set; }
         public string Password { get; set; }
         public string FirstName { get; set; }

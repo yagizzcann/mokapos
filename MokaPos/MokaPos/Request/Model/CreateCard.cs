@@ -2,7 +2,7 @@ namespace MokaPos.Request
 {
     public class CreateCard
     {
-        public string DealerCustomerId { get; set; }
+        public int DealerCustomerId { get; set; }
         public string CustomerCode { get; set; }
         public string CardHolderFullName { get; set; }
         public string CardNumber { get; set; }

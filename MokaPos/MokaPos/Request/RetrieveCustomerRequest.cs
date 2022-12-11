@@ -1,6 +1,6 @@
 namespace MokaPos.Request
 {
-    public class RetrieveCustomerRequest :BaseRequest
+    public class RetrieveCustomerRequest :BaseDealerCustomerRequest
     {
         public RetrieveCustomer DealerCustomerRequest { get; set; }
     }

@@ -1,6 +1,6 @@
 namespace MokaPos.Request
 {
-    public class RetrieveBinNumberRequest : BaseRequest
+    public class RetrieveBinNumberRequest : BasePaymentDealerRequest
     {
         public BinNumberRequest BankCardInformationRequest { get; set; }
     }

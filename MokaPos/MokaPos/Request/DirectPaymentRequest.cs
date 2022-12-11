@@ -1,6 +1,6 @@
 namespace MokaPos.Request
 {
-    public class DirectPaymentRequest : BaseRequest
+    public class DirectPaymentRequest : BasePaymentDealerRequest
     {
         public DirectPaymentDealerRequest PaymentDealerRequest { get; set; }
     }

@@ -1,6 +1,6 @@
 namespace MokaPos.Request
 {
-    public class ThreeDPaymentRequest : BaseRequest
+    public class ThreeDPaymentRequest : BasePaymentDealerRequest
     {
         public ThreeDPaymentDealerRequest PaymentDealerRequest { get; set; }
     }

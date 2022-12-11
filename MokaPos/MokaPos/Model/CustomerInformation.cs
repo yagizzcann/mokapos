@@ -2,7 +2,7 @@ namespace MokaPos.Model
 {
     public class CustomerInformation
     {
-        public string DealerCustomerId { get; set; }
+        public int DealerCustomerId { get; set; }
         public string CustomerCode { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
