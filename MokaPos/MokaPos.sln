@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MokaPos", "MokaPos\MokaPos.csproj", "{BFE79A1F-A2B3-4C4B-B46E-22B8461AE266}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MokaPos.Terminal", "MokaPos.Terminal\MokaPos.Terminal.csproj", "{CB6FC638-CA9A-45A4-98DA-FFA72B7983B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFE79A1F-A2B3-4C4B-B46E-22B8461AE266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFE79A1F-A2B3-4C4B-B46E-22B8461AE266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFE79A1F-A2B3-4C4B-B46E-22B8461AE266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFE79A1F-A2B3-4C4B-B46E-22B8461AE266}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB6FC638-CA9A-45A4-98DA-FFA72B7983B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB6FC638-CA9A-45A4-98DA-FFA72B7983B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB6FC638-CA9A-45A4-98DA-FFA72B7983B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB6FC638-CA9A-45A4-98DA-FFA72B7983B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
