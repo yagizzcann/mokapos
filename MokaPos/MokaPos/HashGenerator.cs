@@ -17,13 +17,21 @@ namespace MokaPos
         /// <returns></returns>
         public static string GenerateHash(string key)
         {
+            System.Text.Encoding encoding = Encoding.UTF8;
+            byte[] plainBytes = encoding.GetBytes(key);
 #if NETSTANDARD
             SHA256 algorithm = SHA256.Create();
 #else
             SHA256Managed algorithm = new SHA256Managed();
 #endif
-            byte[] computeHash = algorithm.ComputeHash(Encoding.UTF8.GetBytes(key));
-            return Convert.ToBase64String(computeHash);
+            string hashedData = String.Empty;
+            byte[] hashedBytes = algorithm.ComputeHash(plainBytes, 0, encoding.GetByteCount(key));
+            foreach (byte bit in hashedBytes)
+            {
+                hashedData += bit.ToString("x2");
+            }
+
+            return hashedData;
         }
     }
 }
