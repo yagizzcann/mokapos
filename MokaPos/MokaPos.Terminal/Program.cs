@@ -12,14 +12,17 @@ namespace MokaPos.Terminal
             Console.WriteLine("Hello World!");
             string baseUrl = "https://service.moka.com";
             string baseUrl2 = "https://service.testmoka.com";
+            string baseUrl3 = "https://service.refmoka.com";
 
             var dealerAuth = new PaymentDealerAuthentication()
             {
                 DealerCode = "",
-                Username = "-c029-4bbe-b4a6-",
-                Password = "-ad3c-4b5a-ac8f-"
+                Username = "",
+                Password = ""
             };
             dealerAuth.SetCheckKey();
+           
+            
              BaseResponse<string> response2 = ThreedPayment.Create(new ThreeDPaymentRequest()
             {
                 BaseUrl = baseUrl,
@@ -120,7 +123,7 @@ namespace MokaPos.Terminal
                 "f73d6d0d888d21a73fdd1b854dde003e39b5cbc01df8dd09b7e8b4f4691c0064");
 
 
-            BaseResponse<ThreedPaymentResponse> response2 = ThreedPayment.Create(new ThreeDPaymentRequest()
+            BaseResponse<string> response2 = ThreedPayment.Create(new ThreeDPaymentRequest()
             {
                 BaseUrl = baseUrl,
                 PaymentDealerAuthentication = dealerAuth,

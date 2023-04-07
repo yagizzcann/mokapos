@@ -9,6 +9,7 @@
         <Title>Mokapos client library</Title>
         <PackageLicenseUrl>https://github.com/yagizzcann/mokapos/LICENSE</PackageLicenseUrl>
         <PackageVersion>1.0.1</PackageVersion>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
