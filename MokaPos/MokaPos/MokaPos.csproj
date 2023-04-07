@@ -2,13 +2,13 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>Yağız Can</Authors>
         <PackageTags>mokapos</PackageTags>
         <Description>Unofficial client library for mokapos</Description>
         <RepositoryUrl>https://github.com/yagizzcann/mokapos</RepositoryUrl>
         <Title>Mokapos client library</Title>
         <PackageLicenseUrl>https://github.com/yagizzcann/mokapos/LICENSE</PackageLicenseUrl>
+        <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>

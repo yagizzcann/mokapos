@@ -11,17 +11,17 @@ namespace MokaPos.Model
 
         private const string DoDirectMobilePaymentThreeDUrl =
             "/PaymentDealer/DoDirectPaymentThreeDMobile";
-        public static BaseResponse<ThreedPaymentResponse> Create(ThreeDPaymentRequest request)
+        public static BaseResponse<string> Create(ThreeDPaymentRequest request)
         {
-            return RestHttpClient.Instance.Post<BaseResponse<ThreedPaymentResponse>>(
+            return RestHttpClient.Instance.Post<BaseResponse<string>>(
                 request.BaseUrl + DoDirectPaymentThreeDUrl,
                 request.GetHttpHeaders(),
                 request);
         }
 
-        public static async Task<BaseResponse<ThreedPaymentResponse>> CreateAsync(ThreeDPaymentRequest request)
+        public static async Task<BaseResponse<string>> CreateAsync(ThreeDPaymentRequest request)
         {
-            return await RestHttpClient.Instance.PostAsync<BaseResponse<ThreedPaymentResponse>>(
+            return await RestHttpClient.Instance.PostAsync<BaseResponse<string>>(
                 request.BaseUrl + DoDirectPaymentThreeDUrl,
                 request.GetHttpHeaders(), request);
         }
@@ -29,17 +29,17 @@ namespace MokaPos.Model
         
         
         
-        public static BaseResponse<ThreedPaymentResponse> CreateMobile(ThreeDPaymentMobileRequest request)
+        public static BaseResponse<string> CreateMobile(ThreeDPaymentMobileRequest request)
         {
-            return RestHttpClient.Instance.Post<BaseResponse<ThreedPaymentResponse>>(
+            return RestHttpClient.Instance.Post<BaseResponse<string>>(
                 request.BaseUrl + DoDirectMobilePaymentThreeDUrl,
                 request.GetHttpHeaders(),
                 request);
         }
 
-        public static async Task<BaseResponse<ThreedPaymentResponse>> CreateMobileAsync(ThreeDPaymentMobileRequest request)
+        public static async Task<BaseResponse<string>> CreateMobileAsync(ThreeDPaymentMobileRequest request)
         {
-            return await RestHttpClient.Instance.PostAsync<BaseResponse<ThreedPaymentResponse>>(
+            return await RestHttpClient.Instance.PostAsync<BaseResponse<string>>(
                 request.BaseUrl + DoDirectMobilePaymentThreeDUrl,
                 request.GetHttpHeaders(), request);
         }

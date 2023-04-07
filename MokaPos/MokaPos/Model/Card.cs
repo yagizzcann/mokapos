@@ -84,16 +84,16 @@ namespace MokaPos.Model
         
         
         
-        public static BaseResponse<CustomerDetailResponse> Remove(DeleteCardRequest request)
+        public static BaseResponse<bool> Remove(DeleteCardRequest request)
         {
-            return RestHttpClient.Instance.Post<BaseResponse<CustomerDetailResponse>>(request.BaseUrl + RemoveUrl,
+            return RestHttpClient.Instance.Post<BaseResponse<bool>>(request.BaseUrl + RemoveUrl,
                 request.GetHttpHeaders(),
                 request);
         }
 
-        public static async Task<BaseResponse<CustomerDetailResponse>> RemoveAsync(DeleteCardRequest request)
+        public static async Task<BaseResponse<bool>> RemoveAsync(DeleteCardRequest request)
         {
-            return await RestHttpClient.Instance.PostAsync<BaseResponse<CustomerDetailResponse>>(
+            return await RestHttpClient.Instance.PostAsync<BaseResponse<bool>>(
                 request.BaseUrl + RemoveUrl,
                 request.GetHttpHeaders(), request);
         }
