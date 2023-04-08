@@ -13,6 +13,7 @@ namespace MokaPos.Model
             "/PaymentDealer/DoDirectPaymentThreeDMobile";
         public static BaseResponse<string> Create(ThreeDPaymentRequest request)
         {
+            request.PaymentDealerRequest.ReturnHash = 0;
             return RestHttpClient.Instance.Post<BaseResponse<string>>(
                 request.BaseUrl + DoDirectPaymentThreeDUrl,
                 request.GetHttpHeaders(),
@@ -21,16 +22,15 @@ namespace MokaPos.Model
 
         public static async Task<BaseResponse<string>> CreateAsync(ThreeDPaymentRequest request)
         {
+            request.PaymentDealerRequest.ReturnHash = 0;
             return await RestHttpClient.Instance.PostAsync<BaseResponse<string>>(
                 request.BaseUrl + DoDirectPaymentThreeDUrl,
                 request.GetHttpHeaders(), request);
         }
         
-        
-        
-        
         public static BaseResponse<string> CreateMobile(ThreeDPaymentMobileRequest request)
         {
+            request.PaymentDealerRequest.ReturnHash = 0;
             return RestHttpClient.Instance.Post<BaseResponse<string>>(
                 request.BaseUrl + DoDirectMobilePaymentThreeDUrl,
                 request.GetHttpHeaders(),
@@ -39,10 +39,49 @@ namespace MokaPos.Model
 
         public static async Task<BaseResponse<string>> CreateMobileAsync(ThreeDPaymentMobileRequest request)
         {
+            request.PaymentDealerRequest.ReturnHash = 0;
             return await RestHttpClient.Instance.PostAsync<BaseResponse<string>>(
                 request.BaseUrl + DoDirectMobilePaymentThreeDUrl,
                 request.GetHttpHeaders(), request);
         }
+        
+        
+        
+        
+        public static BaseResponse<ThreedPaymentResponse> CreateWithHash(ThreeDPaymentRequest request)
+        {
+            request.PaymentDealerRequest.ReturnHash = 1;
+            return RestHttpClient.Instance.Post<BaseResponse<ThreedPaymentResponse>>(
+                request.BaseUrl + DoDirectPaymentThreeDUrl,
+                request.GetHttpHeaders(),
+                request);
+        }
+
+        public static async Task<BaseResponse<ThreedPaymentResponse>> CreateWithHashAsync(ThreeDPaymentRequest request)
+        {
+            request.PaymentDealerRequest.ReturnHash = 1;
+            return await RestHttpClient.Instance.PostAsync<BaseResponse<ThreedPaymentResponse>>(
+                request.BaseUrl + DoDirectPaymentThreeDUrl,
+                request.GetHttpHeaders(), request);
+        }
+        
+        public static BaseResponse<ThreedPaymentResponse> CreateWithHashMobile(ThreeDPaymentMobileRequest request)
+        {
+            request.PaymentDealerRequest.ReturnHash = 1;
+            return RestHttpClient.Instance.Post<BaseResponse<ThreedPaymentResponse>>(
+                request.BaseUrl + DoDirectMobilePaymentThreeDUrl,
+                request.GetHttpHeaders(),
+                request);
+        }
+
+        public static async Task<BaseResponse<ThreedPaymentResponse>> CreateMobileWithHashAsync(ThreeDPaymentMobileRequest request)
+        {
+            request.PaymentDealerRequest.ReturnHash = 1;
+            return await RestHttpClient.Instance.PostAsync<BaseResponse<ThreedPaymentResponse>>(
+                request.BaseUrl + DoDirectMobilePaymentThreeDUrl,
+                request.GetHttpHeaders(), request);
+        }
+        
 
 
         /// <summary>
